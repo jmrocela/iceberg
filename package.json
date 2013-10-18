@@ -1,0 +1,47 @@
+{
+  "name": "Iceberg",
+  "version": "1.0.0",
+  "author": {
+    "name": "John Rocela",
+    "url": "http://iamjamoy.com/"
+  },
+  "homepage": "http://jmrocela.github.io/iceberg",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/jmrocela/iceberg.git"
+  },
+  "bugs": {
+    "url": "http://github.com/jmrocela/iceberg/issues"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://github.com/jmrocela/iceberg/blob/master/LICENSE"
+    }
+  ],
+  "scripts": {
+    "test": "vows --spec"
+  },
+  "preferGlobal": true,
+  "bin": {
+    "iceberg": "./bin/iceberg"
+  },
+  "keywords": [
+    "cron",
+    "batch",
+    "workers",
+    "background process",
+    "scheduler"
+  ],
+  "dependencies": {
+    "glob": "~3.2.6",
+    "underscore": "~1.5.2",
+    "redis": "~0.8.6",
+    "connect": "~2.9.1",
+    "moment": "~2.3.1",
+    "q": "~0.9.7"
+  },
+  "devDependencies": {
+    "vows": "~0.7.0"
+  }
+}
