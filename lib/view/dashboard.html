@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html class="no-js">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+<title>Iceberg - Dashboard</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width">
+<link rel="stylesheet" href="assets/mono/css/bootstrap.min.css">
+<link rel="stylesheet" href="assets/mono/css/main.css">
+</head>
+<body>
+
+<div id="dashboard">
+
+    <div id="menu">
+        <div id="search">
+            <input type="text" class="form-control" placeholder="Search Jobs"/>
+            <span class="glyphicon glyphicon-search"></span>
+        </div>
+
+        <div id="stats">
+            <div class="container text-center">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <h2>12</h2>
+                        <p>Running</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <h2>155</h2>
+                        <p>Total</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <h2>2</h2>
+                        <p>Failed</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="newjob">
+            <button class="btn btn-block"><span class="glyphicon glyphicon-plus"></span> New Job</button>
+        </div>
+
+        <hr>
+
+        <div id="activity">
+            <!-- Activity Logs -->
+            <p>Just now</p>
+            <div>
+                <ul class="activities list-unstyled">
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <span class="glyphicon glyphicon-ok"></span>
+                            </div>
+                            <div class="col-xs-10">
+                                <p><a href="">run_batch_listings_dump_to_table</a> finished</p>
+                                <time>2 minutes ago</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <span class="glyphicon glyphicon-warning-sign"></span>
+                            </div>
+                            <div class="col-xs-10">
+                                <p> An error was recorded by <a href="">run_batch_listings_dump_to_table</a></p>
+                                <time>14 minutes ago</time>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="row">
+                            <div class="col-xs-1">
+                                <span class="glyphicon glyphicon-time"></span>
+                            </div>
+                            <div class="col-xs-10">
+                                <p><a href="">Bob Marley</a> started <a href="">run_batch_listings_dump_to_table</a></p>
+                                <time>2 hours ago</time>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="credits" class="text-center">
+            <h1>Iceberg</h1>
+            <p id="copyright">&copy; 2013 <a href="http://iamjamoy.com">John Rocela</a> &#0183; <a href="">MIT License</a></p>
+        </div>
+    </div>
+
+    <div id="form">
+        <!--style="position:absolute;right:0;top:0;bottom:0;width:700px;border-left:1px solid #f0f0f0;"-->
+        <nav class="navbar">
+            <ul class="nav navbar-nav">
+                <li><a href="#" style="padding:25px 30px;border-right:1px solid #f0f0f0;"><span class="glyphicon glyphicon-chevron-left"></span></a></li>
+                <!--li><a href="#" style="padding:25px 30px;border-right:1px solid #f0f0f0;"><span class="glyphicon glyphicon-play"></span></a></li>
+                <li><a href="#" style="padding:25px 30px;border-right:1px solid #f0f0f0;"><span class="glyphicon glyphicon-stop"></span></a></li-->
+            </ul>
+            <div class="pull-right" style="padding:20px;">
+                <a href="#" style="display:inline-block;font-size:12px;margin-right:10px;">Learn more</a>
+                <button class="btn btn-success">Save Changes</button>
+            </div>
+        </nav>
+        <div style="padding:20px;max-width:900px;">
+            <div class="form-group">
+                <label for="job-name">Job Name</label>
+                <input type="text" class="form-control" style="border:0;border-bottom:1px solid #f0f0f0;border-radius:0;box-shadow:none;height:auto;background:none;font-size:24px;color:#333;" id="job-name" placeholder="Job Name">
+            </div>
+            <div class="form-group">
+                <label for="command">Command</label>
+                <textarea class="form-control" style="border:0;border-bottom:1px solid #f0f0f0;border-radius:0;box-shadow:none;height:auto;background:#464646;font-size:15px;font-family:monospace;font-weight:bold;color:#5cb85c;" id="command" placeholder="Command to Execute" rows="3"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Schedule</label>
+                <div class="well">
+                    <div class="btn-group">
+                        <button class="btn btn-default">Repeat every <span class="caret"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default">1 <span class="caret"></span></button>
+                        <button class="btn btn-default">Minute <span class="caret"></span></button>
+                    </div>
+                    <!--div class="form-group" style="width:50px;">
+                        <label>Weekday</label>
+                        <input type="text" class="form-control" value="*">
+                    </div>
+                    <div class="form-group" style="width:50px;">
+                        <label>Month</label>
+                        <input type="text" class="form-control" value="*">
+                    </div>
+                    <div class="form-group" style="width:50px;">
+                        <label>Date</label>
+                        <input type="text" class="form-control" value="*">
+                    </div>
+                    <div class="form-group" style="width:50px;">
+                        <label>Hour</label>
+                        <input type="text" class="form-control" value="*">
+                    </div>
+                    <div class="form-group" style="width:50px;">
+                        <label>Minute</label>
+                        <input type="text" class="form-control" value="*">
+                    </div>
+                    <div class="form-group" style="width:50px;">
+                        <label>Seconds</label>
+                        <input type="text" class="form-control" value="*">
+                    </div>
+                    <div class="form-group pull-right" style="width:50px;">
+                        <label>Epsilon</label>
+                        <input type="text" class="form-control" value="*">
+                    </div>
+                    <p class="alert alert-warning" style="margin:10px 0 0;font-size:11px;">Working on a Friendlier Scheduler Interface</p-->
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="runafter">Run Jobs after finishing</label>
+                <input type="text" class="form-control" id="runafter">
+            </div>
+            <div class="form-group">
+                <label for="notify">Notify URL/Email on finish</label>
+                <input type="text" class="form-control" id="notify">
+            </div>
+            <div class="form-group">
+                <label>Persist when Job Failed</label>
+                <div class="well">
+                    <div class="btn-group">
+                        <button class="btn btn-default">Once after <span class="caret"></span></button>
+                    </div>
+                    <div class="btn-group">
+                        <button class="btn btn-default">1 <span class="caret"></span></button>
+                        <button class="btn btn-default">Minute <span class="caret"></span></button>
+                    </div>
+                    until
+                    <div class="btn-group">
+                        <button class="btn btn-default">Job Succeeded <span class="caret"></span></button>
+                    </div>
+                </div>
+            </div>
+            <div class="well" style="margin:20px 0;">
+                <div class="row">
+                    <div class="col-xs-4">
+                        <h5>Enable Async</h5>
+                        <p style="font-size:12px;">Enabling Async will make your job run alongside another one of it's instance.</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <h5>Disable this Job</h5>
+                        <p style="font-size:12px;">Iceberg will not run a disabled job. The scheduler will ignore this job on the next tick.</p>
+                    </div>
+                    <div class="col-xs-4">
+                        <h5>Delete this Job</h5>
+                        <p style="font-size:12px;">Removes this job from Iceberg. This action cannot be undone.</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-4">
+                        <button class="btn btn-default" style="margin-top:15px;">Enable Async</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-default" style="margin-top:15px;">Disable this Job</button>
+                    </div>
+                    <div class="col-xs-4">
+                        <button class="btn btn-danger" style="margin-top:15px;">Delete this Job</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="list" class="hide">
+        <table width="100%">
+            <thead>
+                <tr>
+                    <th>Name <span class="caret"></span></th>
+                    <th class="text-center" style="width:60px;">Instance</th>
+                    <th class="text-center" style="width:60px;">Logs</th>
+                    <th class="text-center" style="width:90px;">Last <span class="caret"></span></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td style="border-left:15px solid #f0f0f0;">
+                        <a href="">run_batch_listings_dump_to_table</a>
+                    </td>
+                    <td class="text-center">
+                        <a href=""><span class="glyphicon glyphicon-dashboard"></span></a>
+                    </td>
+                    <td class="text-center">
+                        <a href=""><span class="glyphicon glyphicon-th-list"></span></a>
+                    </td>
+                    <td class="text-center">
+                        <span class="label label-success">Success</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left:15px solid #5cb85c;">
+                        <a href="">create_listing_hosting_S3</a>
+                    </td>
+                    <td class="text-center">
+                        <a href=""><span class="glyphicon glyphicon-dashboard"></span></a>
+                    </td>
+                    <td class="text-center">
+                        <a href=""><span class="glyphicon glyphicon-th-list"></span></a>
+                    </td>
+                    <td class="text-center">
+                        <span class="label label-success">Success</span>
+                    </td>
+                </tr>
+                <tr>
+                    <td style="border-left:15px solid #f0f0f0;">
+                        <a href="">failing_batch_jobs_to_test</a>
+                    </td>
+                    <td class="text-center">
+                        <a href=""><span class="glyphicon glyphicon-dashboard"></span></a>
+                    </td>
+                    <td class="text-center">
+                        <a href=""><span class="glyphicon glyphicon-th-list"></span></a>
+                    </td>
+                    <td class="text-center">
+                        <span class="label label-danger">Failed</span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+</div>
+
+</body>
+</html>
